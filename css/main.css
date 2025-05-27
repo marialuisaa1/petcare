@@ -1,230 +1,111 @@
-/*Reset do Browser" */
+/* Reset do Browser/navegador */
+
 *{
-    box-sizing: 
-    border-box;
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
+    font-family: Arial, Helvetica, sans-serif
+    ;
 }
-body{
+
+body {
     color: #263138;
 }
-/*HEADER - MENU*/
-.menu{
-    background-color: #FF9A6C;
-    display: flex;
+
+/* cabeçalho/header/menu */
+.menu {
+    background-color: #FBBC05;
+    display: flex;  /* transforma um contêiner em flexível, organizando seus itens em linha ou coluna com controle fácil de alinhamento e espaçamento. */
     align-items: center;
-    justify-content: space-between;
-    padding: 24px 80px 24px 80px;
+    justify-content: space-between; /* distribui os itens em linha com espaços iguais entre eles, deixando o primeiro à esquerda e o último à direita. */
+    padding: 24px 80px; /* o primeiro número é o espaço entre o topo (header) e o final (footer). E o segundo número é o espaço das laterais */
 }
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* Remove o sublinhado do link */
+  color: #fff;
+}
+.logo a p {
+  margin: 0;
+  padding: 0;
+  font-size: 30px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-weight: 400;
+  margin-top: 20px;
+}
+
 .menu nav a{
-    color: #FFF;
-    font-weight: 600;
+    color: #fff;
+    font-weight: 600; /* deixa o texto com uma espessura semi-negrito, mais grosso que o normal, mas menos que o negrito total (700). */
     padding: 20px;
-    text-decoration: none;
+    text-decoration: none; 
 }
-/*fixar menu- topo*/
-.menu{
 
+/* Deixar o menu fixo */
+.menu {
     position: fixed;
-    top: 0;
+    top: 0; /* para sempre deixar ele no topo */
     left: 0;
-    width: 100%;/*O header ocupa 100% na tela*/
-    z-index: 100;/*Coloca o header acima de outros elementos*/
-
+    width: 100%; /* ocupar 100% da tela */
+    z-index: 100; /* define a ordem de sobreposição dos elementos na tela — quanto maior o valor, mais “por cima” o elemento aparece em relação aos outros (só funciona com position definido). || Coloca o header acima de outros elementos */
 }
 
-/*Config da seção Início */
-#inicio{
+#inicio {
     display: flex;
     align-items: center;
-    gap: 32px;
+    gap: 32px; /* define o espaçamento entre os itens dentro de um contêiner flexível ou grid */
     padding: 80px 80px 24px 80px;
     position: relative;
-}
-h1{
-    margin-bottom: 20px;
-    
-}
-h1, h2{
-    font-size: 32px;
-    font-weight: 600;
-    margin-top: 32px;
-}
-.paragrafo{
-    line-height: 150%;
-    margin-bottom: 64px;
-    
-}
-.botao{
-    background-color: #FF9A6C;
-    color: #FFF;
-    border-radius: 8px;
-    padding: 16px 32px;
-    text-decoration: none;
-}
-.botao-transparente{
-    background-color: transparent;
-    color: #FF725E;
-    padding: 16px 32px;
-    text-underline-offset: 4px;
+   
 }
 
-.absolute{
-    position: absolute;
-    bottom: -20px;
+.inicio{
+  margin: 140px;
+}
+
+h1, h2{
+    font-size: 60px;
+    font-weight: 600;
+    margin-top: 32px;
+    padding-bottom: 50px;
+}
+
+.paragafo p{
+    line-height: 150%; /* define a altura da linha do texto como 150% do tamanho da fonte, aumentando o espaço entre as linhas de texto. */
+    margin-bottom: 64px;
+    padding-top: 50px;
+}
+
+.botao {
+    background-color: #FBBC05;
+    border-radius: 50px;
+    color: #fff;
+    padding: 20px 42px;
+    text-decoration: none;
+}
+
+.botao:hover{
+  background-color: #ffd24c;
+}
+
+.botao-transparente {
+    background-color: transparent;
+    color: #FBBC05;
+    padding: 10px 22px;
+    text-underline-offset: 4px; /* move a **linha do sublinhado** 4 pixels **mais longe do texto**, criando um espaço entre o texto e o sublinhado para melhorar a aparência. */
+}
+
+.botao-transparente:hover{
+  color: #cc9900;
+}
+
+
+.absolute {
+    position: absolute; /* posiciona um elemento em relação ao contêiner mais próximo com posição diferente de static. */
+    bottom: -50px;
     left: 0;
     width: 100%;
     z-index: -10;
 }
-/*config seção clinica*/
-#clinica{
-    display: flex;
-    align-items: center;
-    gap: 32px;
-    padding: 80px 80px 24px 80px;
-    position: relative;
-}
-.paragrafo2{
-    line-height: 150%;
-    margin-bottom: 0px;
-    
-}
-
-ul{
- line-height: 150%;
- margin-top: 10px;
- margin-bottom: 50px;
- padding-left: 0;
- list-style-position: inside;
- margin-left: 3%;
-
-}
-li {
-    margin-bottom: 5px; 
-  }
-  /*config seção farmácia*/
-
-  #farmacia {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 32px;
-  padding: 80px 80px 24px 80px;
-  position: relative;
-}
-
-.paragrafo3 {
-  text-align: justify; 
-  margin-left: 350px;
-  margin-right: 350px;
-  margin-top: 100px;
-  line-height: 150%;
-  margin-bottom: 64px;
-}
-
-/*config da seção duvidas*/
-
-#duvida{
-    display: flex;
-    align-items: center;
-    gap: 64px;
-    padding: 80px;
-    
-}
-#duvida h2{
-    margin-bottom: 30px;
-}
-.duvida{
-    position: relative;
-}
-
-.duvida h3{
-    border: 2px solid #FF725E;
-    border-radius: 8px;
-    padding: 24px;
-    
-}
-
-.duvida img{
-    position: absolute;
-    top:32px;
-    right: 24px;
-}
-.duvida .paragrafo{
-    border-right: 1px solid #FF725E;
-    border-bottom: 1px solid #FF725E;
-    border-left: 1px solid #FF725E;
-    border-radius: 0 0 8px 8px;
-    margin-top: -40px;
-    
-    /*Eventos JS*/
-    padding: 10px 24px;
-    opacity: 0;
-    height: 0;
-    overflow: hidden;
-    transition: .2s;
-}
-.duvida.ativa .paragrafo{
-    opacity: 1;
-    height: fit-content;
-    overflow: 24px;
-    padding: 60px 24px 10px 24px;
-}
-
-/*Footer*/
-.footer {
-    background-color: #fde0d6;
-    padding: 40px 60px 20px;
-  }
-  
-  .footer-content {
-    display: flex;
-    gap: 30px;
-  }
-  
-  .footer-section {
-    flex: 1;
-    min-width: 220px;
-  }
-  
-  .logo-img {
-    width: 120px;
-    margin-bottom: 10px;
-  }
-  
-  .footer-section p,
-  .footer-section a,
-  .footer-section li {
-    color: #1e1e1e;
-    text-decoration: none;
-    list-style: none;
-    margin: 8px 0;
-    font-size: 16px;
-  }
-  
-  .footer-section ul {
-    padding: 0;
-  }
-  
-  .footer-section h3 {
-    margin-bottom: 10px;
-    color: #1e1e1e;
-  }
-  
-  .destaque {
-    color: #e26854;
-  }
-  
-  .footer-bottom {
-    text-align: center;
-    background-color: #1e2a30;
-    color: #fff;
-    padding: 15px;
-    font-size: 14px;
-  }
-  
-  .footer-bottom a {
-    color: #e26854;
-    margin-left: 10px;
-    text-decoration: none;
-  }
