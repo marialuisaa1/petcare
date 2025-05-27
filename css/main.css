@@ -4,12 +4,13 @@
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: Arial, Helvetica, sans-serif
-    ;
+    font-family: Arial, Helvetica, sans-serif;
+
 }
 
 body {
     color: #263138;
+    background-color: #f7f5f5;
 }
 
 /* cabeçalho/header/menu */
@@ -145,3 +146,38 @@ h1, h2{
     margin-top: 5px; /* ajustável conforme desejado */
     display: inline-block; /* necessário para que margin funcione corretamente */
 }
+
+#farmacia {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 32px;
+    padding: 80px;
+    flex-wrap: wrap; /* Faz os elementos quebrarem para a próxima linha em telas menores */
+    text-align: center;
+    flex-direction: column; /* Coloca o h1 em cima da imagem */
+    margin-top: 32px;
+}
+
+#farmacia img {
+    max-width: 100%;
+    height: auto;
+}
+
+#farmacia h1 {
+    font-size: 32px;
+    font-weight: 600;
+    text-align: center;
+    margin-top: 32px;
+    margin-bottom: 10px; 
+  }
+  
+
+#farmacia .paragrafo {
+    line-height: 150%;
+    margin-bottom: 20px;
+    max-width: 919px; 
+    text-align: justify; 
+    margin-left: auto;
+    margin-right: auto;
+  }
