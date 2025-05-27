@@ -109,3 +109,39 @@ h1, h2{
     width: 100%;
     z-index: -10;
 }
+
+#clinica {
+    display: flex;
+    align-items: center;
+    gap: 32px; /* define o espaçamento entre os itens dentro de um contêiner flexível ou grid */
+    padding: 80px 80px 24px 80px;
+    position: relative;
+    flex-direction: row-reverse;
+}
+
+#clinica h1, h2{
+    font-size: 32px;
+    font-weight: 600;
+    margin-top: 32px;
+}
+
+#clinica p {
+    line-height: 150%; /* define a altura da linha do texto como 150% do tamanho da fonte, aumentando o espaço entre as linhas de texto. */
+    margin-bottom: 44px;
+    text-align: justify;
+}
+
+#clinica ul li {
+  margin-bottom: 12px; /* ou o valor que preferir */
+    
+}
+
+.lista   {
+  padding-left: 20px;
+}
+
+#clinica a.botao,
+#clinica a.botao-transparente {
+    margin-top: 5px; /* ajustável conforme desejado */
+    display: inline-block; /* necessário para que margin funcione corretamente */
+}
